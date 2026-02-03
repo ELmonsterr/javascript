@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testisivu</title>
+    <title>JavaScript Testi</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding: 20px;
+            padding: 40px;
+            background-color: #f0f0f0;
         }
         button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
+            padding: 15px 30px;
+            background-color: #008CBA;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 18px;
+            margin: 20px 0;
+        }
+        button:hover {
+            background-color: #007399;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
-    <h1>Tervetuloa!</h1>
-    <button onclick="alert('Hei, tervetuloa sivulle!')">Klikkaa tästä</button>
-    <p>Tämä on testisivu.</p>
+    <h1>JavaScript Testisivu</h1>
+    <button onclick="showAlert()">KLIKKAA TÄSTÄ</button>
+    <p>Kun klikkaat nappia, näet JavaScript-toiminnon.</p>
+    <p id="message"></p>
     
     <script>
-        console.log("Sivu ladattu!");
+        function showAlert() {
+            alert("Onnistui! JavaScript toimii!");
+            
+            // Vaihtoehtoisesti muuta sivun tekstiä
+            document.getElementById("message").innerHTML = 
+                "JavaScript toimii! Nappia klikattu: " + new Date().toLocaleTimeString();
+        }
+        
+        // Ilmoitus sivun latautumisesta
+        console.log("Sivu ladattu onnistuneesti!");
+        document.getElementById("message").innerHTML = "Sivu on valmiina! Klikkaa nappia.";
     </script>
 </body>
 </html>
