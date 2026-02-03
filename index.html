@@ -1,53 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>JavaScript Testi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 40px;
-            background-color: #f0f0f0;
-        }
-        button {
-            padding: 15px 30px;
-            background-color: #008CBA;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 18px;
-            margin: 20px 0;
-        }
-        button:hover {
-            background-color: #007399;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-            font-size: 16px;
-        }
-    </style>
-</head>
 <body>
-    <h1>JavaScript Testisivu</h1>
-    <button onclick="showAlert()">KLIKKAA TÄSTÄ</button>
-    <p>Kun klikkaat nappia, näet JavaScript-toiminnon.</p>
-    <p id="message"></p>
-    
-    <script>
-        function showAlert() {
-            alert("Onnistui! JavaScript toimii!");
-            
-            // Vaihtoehtoisesti muuta sivun tekstiä
-            document.getElementById("message").innerHTML = 
-                "JavaScript toimii! Nappia klikattu: " + new Date().toLocaleTimeString();
-        }
-        
-        // Ilmoitus sivun latautumisesta
-        console.log("Sivu ladattu onnistuneesti!");
-        document.getElementById("message").innerHTML = "Sivu on valmiina! Klikkaa nappia.";
-    </script>
+    <h2>Testi</h2>
+    <button onclick="alert('Toimii!')">Klikkaa</button>
+    <p>Jos näet napin, HTML toimii. Jos klikkaat ja tulee viesti, JavaScript toimii.</p>
 </body>
 </html>
